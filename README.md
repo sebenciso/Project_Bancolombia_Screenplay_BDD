@@ -1,4 +1,4 @@
-# Proyecto de pruebas automatizadas para Bancolombia
+# Proyecto de pruebas automatizadas para Sufi- Bancolombia
 
 Este proyecto contiene pruebas automatizadas utilizando Cucumber, Selenium y Serenity BDD. Con lenguaje JAVA
 
