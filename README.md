@@ -1,4 +1,4 @@
-# Proyecto de pruebas automatizadas para Sufi- Bancolombia
+# Proyecto de pruebas automatizadas para Bancolombia: Sufi- Crédito Vehiculos
 
 Este proyecto contiene pruebas automatizadas utilizando Cucumber, Selenium y Serenity BDD. Con lenguaje JAVA
 
@@ -39,25 +39,21 @@ Ejecutar todos los feature del proyecto con edge
 mvn clean verify -Dwebdriver.driver="edge"
 
 ```
-## Ejecutar el feature de Login
+## Ejecutar el feature SaberMas
 
 ```
-mvn clean verify -Dcucumber.options="src/test/resources/features/ValidarIngresarURL.feature"
+mvn clean verify -Dcucumber.options="src/test/resources/features/SaberMas.feature.feature"
 ```
 ## Ejecutar El Feature Para Los Simuladores De Créditos
 
 ```
-mvn clean verify -Dcucumber.options="src/test/resources/features/ValidarIngresarSABERMAS.feature"
+mvn clean verify -Dcucumber.options="src/test/resources/feature/SaberMas.feature --tags @ValidarSimularTuCreditoSatisfactoriamente"
 
-mvn clean verify -Dcucumber.options="src/test/resources/feature/SimuladorCreditoVehiculos.feature --tags @ValidacionSimuladorCreditoMotoAltoCilindraje"
+mvn clean verify -Dcucumber.filter.tags="@ValidarSimularTuCreditoSatisfactoriamente" -Dwebdriver.driver=chrome
 
-mvn clean verify -Dcucumber.filter.tags="@ValidacionSimuladorCreditoMotoAltoCilindraje" -Dwebdriver.driver=chrome
+mvn clean verify -Dtags="@@ValidarSimularTuCreditoSatisfactoriamente"
 
-mvn clean verify -Dtags="@ValidacionSimuladorCreditoMotoAltoCilindraje"
-
-mvn clean verify -Dcucumber.options="--tags '@ValidacionSimuladorCreditoMotoAltoCilindraje'"
-
-
+mvn clean verify -Dcucumber.options="--tags '@ValidarSimularTuCreditoSatisfactoriamente'"
 ```
 
 ## Arquitectura (Arquetipo) del Proyecto
@@ -81,6 +77,6 @@ mvn clean verify -Dcucumber.options="--tags '@ValidacionSimuladorCreditoMotoAlto
 + runners
   Clases que permiten correr los tests
 + step definitions
-  Clases que mapean las líneas Gherkin a código java
+  Clases que mapean las líneas Gherkin a código .java
 + features
-  La representación de las historias en archivos cucumber# Project_Bancolombia_Screenplay_BDD
+  La representación de las historias en archivos cucumber
